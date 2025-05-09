@@ -36,7 +36,6 @@ export default function LoginPage() {
     });
     if (res?.ok) {
       toast.success('Login successful!');
-      // Delay redirection a bit to show toast
       setTimeout(() => {
         window.location.href = callbackUrl;
       }, 1500);
@@ -47,7 +46,23 @@ export default function LoginPage() {
 
   const handleSocialLogin = (provider: string) => {
     signIn(provider, {
-      callbackUrl, // dynamic redirect
+      callbackUrl,
+    });
+  };
+
+  const fillAdminCredentials = () => {
+    setFormData({
+      email: 'admin@gmail.com',
+      password: 'admin@123',
+      remember: false,
+    });
+  };
+
+  const fillUserCredentials = () => {
+    setFormData({
+      email: 'shakib@shakib.com',
+      password: 'shakib@shakib.com',
+      remember: false,
     });
   };
 
@@ -57,6 +72,24 @@ export default function LoginPage() {
         <h2 className="text-center text-2xl font-semibold text-gray-700">
           Login
         </h2>
+
+        {/* Quick Login Buttons */}
+        <div className="flex justify-between gap-4">
+          <button
+            type="button"
+            onClick={fillAdminCredentials}
+            className="w-1/2 rounded-lg border border-gray-300 bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200"
+          >
+            Admin Credentials
+          </button>
+          <button
+            type="button"
+            onClick={fillUserCredentials}
+            className="w-1/2 rounded-lg border border-gray-300 bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200"
+          >
+           User Credentials
+          </button>
+        </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -116,18 +149,18 @@ export default function LoginPage() {
                 name="remember"
                 checked={formData.remember}
                 onChange={handleChange}
-                className="cursor-pointer rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                className="cursor-pointer rounded border-gray-300 text-primary focus:accent"
               />
               <span className="ml-2 text-sm text-gray-600">Remember me</span>
             </label>
-            <a href="#" className="text-sm text-indigo-600 hover:underline">
+            <a href="#" className="text-sm text-primary hover:underline">
               Forgot password?
             </a>
           </div>
 
           <button
             type="submit"
-            className="w-full cursor-pointer rounded-lg bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-800"
+            className="w-full cursor-pointer rounded-lg bg-primary px-4 py-2 text-white hover:secondary"
           >
             Login
           </button>
@@ -154,7 +187,7 @@ export default function LoginPage() {
           >
             <Image
               src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
-              alt="GitHub Logo"
+              alt="Google Logo"
               width={24}
               height={24}
               className="mr-2 rounded-full"
@@ -165,7 +198,7 @@ export default function LoginPage() {
 
         <p className="text-center text-sm text-gray-600">
           Don&rsquo;t have an account?{' '}
-          <Link href="/register" className="text-indigo-600 hover:underline">
+          <Link href="/register" className="text-primary hover:underline">
             Sign up
           </Link>
         </p>

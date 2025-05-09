@@ -54,11 +54,11 @@ export default function SearchBar() {
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
           placeholder="Search by name"
-          className="w-full rounded-full bg-white border-gray-200 pr-12 placeholder:text-[10px] lg:placeholder:text-base"
+          className="w-full rounded--2xl bg-white border-gray-200 pr-12 placeholder:text-[10px] lg:placeholder:text-base"
         />
         <Button
           onClick={handleSearch}
-          className="absolute top-0 right-0 h-full rounded-l-none rounded-r-full bg-secondary hover:bg-primary"
+          className="absolute top-0 right-0 h-full rounded-l-none  bg-secondary hover:bg-primary"
         >
           <Search className="h-5 w-5" />
           <span className="sr-only">Search</span>

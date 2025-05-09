@@ -18,6 +18,7 @@ export type MedicineCategory =
   | 'Emergency';
 
 export interface IMedicine {
+  originalPrice: number;
   _id?: string;
   name: string;
   description?: string;

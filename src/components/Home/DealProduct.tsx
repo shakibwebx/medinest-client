@@ -82,8 +82,8 @@ const DealProduct = () => {
                 </p>
 
                 <div className="flex items-center gap-3 text-lg mt-2">
-                  <del className="text-muted-foreground">${product.price.toFixed(2)}</del>
-                  <p className="font-bold text-primary">${product.discountedPrice.toFixed(2)}</p>
+                  <del className="text-muted-foreground">৳{product.price.toFixed(2)}</del>
+                  <p className="font-bold text-primary">৳{product.discountedPrice.toFixed(2)}</p>
                   <span className="bg-primary/10 text-primary px-2 py-0.5 rounded text-xs">
                     -{product.discount}%
                   </span>

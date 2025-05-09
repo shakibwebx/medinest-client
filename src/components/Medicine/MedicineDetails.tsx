@@ -231,7 +231,7 @@ export default function MedicineDetails({ id }: { id: string }) {
 
               <div className="mt-4">
                 <p className="text-primary text-3xl font-bold">
-                  ${medicine.price?.toFixed(2) || medicine.price}
+                  ৳{medicine.price?.toFixed(2) || medicine.price}
                 </p>
                 <p className="text-muted-foreground text-sm">
                   Free shipping on orders over $100

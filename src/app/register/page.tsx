@@ -96,7 +96,7 @@ export default function RegisterPage() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="mt-1 w-full rounded-lg border px-4 py-2 focus:ring focus:ring-indigo-300 focus:outline-none"
+              className="mt-1 w-full rounded-lg border px-4 py-2 focus:ring focus:accent focus:outline-none"
             />
           </div>
 
@@ -115,7 +115,7 @@ export default function RegisterPage() {
                 required
                 value={formData.password}
                 onChange={handleChange}
-                className="w-full rounded-lg border px-4 py-2 pr-10 focus:ring focus:ring-indigo-300 focus:outline-none"
+                className="w-full rounded-lg border px-4 py-2 pr-10 focus:ring focus:ring-accent focus:outline-none"
               />
 
               <button
@@ -147,7 +147,7 @@ export default function RegisterPage() {
                 required
                 value={formData.confirmPassword}
                 onChange={handleChange}
-                className="w-full rounded-lg border px-4 py-2 pr-10 focus:ring focus:ring-indigo-300 focus:outline-none"
+                className="w-full rounded-lg border px-4 py-2 pr-10 focus:ring focus:accent focus:outline-none"
               />
 
               <button
@@ -170,11 +170,11 @@ export default function RegisterPage() {
               name="agreeTerms"
               checked={formData.agreeTerms}
               onChange={handleChange}
-              className="cursor-pointer rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+              className="cursor-pointer rounded border-gray-300 text-primary focus:primary"
             />
             <span className="ml-2 text-sm text-gray-600">
               I agree to the{' '}
-              <a href="#" className="text-indigo-600 hover:underline">
+              <a href="#" className="text-primary hover:underline">
                 Terms & Conditions
               </a>
             </span>
@@ -182,7 +182,7 @@ export default function RegisterPage() {
 
           <button
             type="submit"
-            className="w-full cursor-pointer rounded-lg bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
+            className="w-full cursor-pointer rounded-lg bg-primary px-4 py-2 text-white hover:primary"
           >
             Register
           </button>
@@ -220,7 +220,7 @@ export default function RegisterPage() {
 
         <p className="text-center text-sm text-gray-600">
           Already have an account?{' '}
-          <Link href="/login" className="text-indigo-600 hover:underline">
+          <Link href="/login" className="text-primary hover:underline">
             Login
           </Link>
         </p>

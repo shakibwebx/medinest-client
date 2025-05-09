@@ -104,7 +104,7 @@ export default function ProductsTable() {
               <div className="grid grid-cols-2 gap-2 p-4">
                 <div>
                   <p className="text-muted-foreground text-xs">Price</p>
-                  <p className="font-medium">${product.price.toFixed(2)}</p>
+                  <p className="font-medium">৳{product.price.toFixed(2)}</p>
                 </div>
                 <div>
                   <p className="text-muted-foreground text-xs">Quantity</p>
@@ -213,7 +213,7 @@ export default function ProductsTable() {
                 <TableCell className="font-medium">{product.name}</TableCell>
                 <TableCell>{product.manufacturer}</TableCell>
                 <TableCell>{product.type}</TableCell>
-                <TableCell>${product.price.toFixed(2)}</TableCell>
+                <TableCell>৳{product.price.toFixed(2)}</TableCell>
                 <TableCell>
                   {product.quantity < 1 ? '0' : product.quantity}
                 </TableCell>

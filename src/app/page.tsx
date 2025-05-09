@@ -4,9 +4,10 @@ import Testimonial from '@/components/Home/Testimonial/Testimonial';
 import FeaturedBrandsSlider from '@/components/Home/FeaturedBrand/FeaturedBrandsSlider';
 // import HeroSlider from '@/components/Home/HeroSlider/HeroSlider';
 // import MediCard from '@/components/Home/MediCard';
-import DealProduct from '@/components/Home/DealProduct';
+// import DealProduct from '@/components/Home/DealProduct';
 import HeroBanner from '@/components/Home/HeroBanner';
 import FeatureStrip from '@/components/Home/FeatureStrip';
+import FeaturedProducts from '@/components/Home/FeaturedProducts';
 
 const Home = () => {
   return (
@@ -19,7 +20,8 @@ const Home = () => {
         <FeaturedBrandsSlider />
 
         <Featured />
-        <DealProduct />
+        {/* <DealProduct /> */}
+        <FeaturedProducts />
 
         <Testimonial />
       </div>

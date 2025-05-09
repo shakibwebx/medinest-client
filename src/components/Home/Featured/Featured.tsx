@@ -52,7 +52,7 @@ const Featured = () => {
               <p className="text-sm text-gray-600 line-clamp-2">{product.description}</p>
 
               <p className="font-bold text-primary text-center text-lg">
-                ${product.price}
+                ৳{product.price}
               </p>
 
               <Link href={`/shop/${product._id}`} passHref>

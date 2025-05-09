@@ -198,10 +198,10 @@ const CartPage = () => {
                           <h2 className="text-lg font-semibold">{item.name}</h2>
                           <p className="text-muted-foreground text-sm">
                             <span className="line-through">
-                              ${item.price.toFixed(2)}
+                              ৳{item.price.toFixed(2)}
                             </span>
                             <span className="text-red-600">
-                              ${discountedPrice.toFixed(2)} x {item.quantity}
+                              ৳{discountedPrice.toFixed(2)} x {item.quantity}
                             </span>
                           </p>
                         </div>
@@ -270,7 +270,7 @@ const CartPage = () => {
               <h3 className="mb-4 text-xl font-semibold">Order Summary</h3>
               <div className="mb-2 flex justify-between">
                 <span>Subtotal (Payable Items)</span>
-                <span>${subtotal.toFixed(2)}</span>
+                <span>৳{subtotal.toFixed(2)}</span>
               </div>
 
               <div className="mb-2">
@@ -284,12 +284,12 @@ const CartPage = () => {
 
               <div className="mb-2 flex justify-between">
                 <span>Delivery</span>
-                <span>{deliveryOption === 'standard' ? '$3.00' : '$6.00'}</span>
+                <span>{deliveryOption === 'standard' ? '৳3.00' : '৳6.00'}</span>
               </div>
               <Separator className="my-2" />
               <div className="flex justify-between text-lg font-semibold">
                 <span>Total</span>
-                <span>${total.toFixed(2)}</span>
+                <span>৳{total.toFixed(2)}</span>
               </div>
               <div className="mt-4">
                 <Label className="mb-2 block font-medium">
