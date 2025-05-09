@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const textContainer = {
   hidden: { opacity: 0, y: 30 },
@@ -64,7 +65,9 @@ const HeroBanner = () => {
             whileHover={{ scale: 1.05, boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)' }}
             className="mt-6 bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-full transition duration-300"
           >
-            Shop Now!
+            <Link href="/shop">
+              Shop Now
+            </Link>
           </motion.button>
         </motion.div>
 

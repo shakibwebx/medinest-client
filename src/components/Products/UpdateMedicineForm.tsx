@@ -46,6 +46,7 @@ const UpdateMedicineForm = () => {
     name: '',
     description: '',
     price: 0,
+    originalPrice: 0, // Added originalPrice
     quantity: 1,
     prescriptionFile: null,
     requiredPrescription: false,

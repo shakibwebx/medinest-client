@@ -26,6 +26,7 @@ const CreateMedicineForm = () => {
     name: '',
     description: '',
     price: 0,
+    originalPrice: 0, // Added originalPrice
     quantity: 1,
     prescriptionFile: null,
     requiredPrescription: false,
@@ -111,25 +112,26 @@ const CreateMedicineForm = () => {
 
       // reset form after successful submission
       setFormData({
-        name: '',
-        description: '',
-        price: 0,
-        quantity: 1,
-        prescriptionFile: null,
-        requiredPrescription: false,
-        manufacturer: '',
-        expiryDate: new Date(),
-        type: 'Tablet',
-        categories: [],
-        symptoms: [],
-        discount: 0,
-        imageUrl: '',
-        supplier: '',
-        inStock: true,
-        sku: '',
-        tags: [],
-        isDeleted: false,
-      });
+              name: '',
+              description: '',
+              price: 0,
+              originalPrice: 0, // Added originalPrice
+              quantity: 1,
+              prescriptionFile: null,
+              requiredPrescription: false,
+              manufacturer: '',
+              expiryDate: new Date(),
+              type: 'Tablet',
+              categories: [],
+              symptoms: [],
+              discount: 0,
+              imageUrl: '',
+              supplier: '',
+              inStock: true,
+              sku: '',
+              tags: [],
+              isDeleted: false,
+            });
       setSelectedImage(null);
       setPreviewUrl(null);
     } catch (error: unknown) {
